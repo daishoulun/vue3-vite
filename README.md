@@ -2,6 +2,8 @@
 [Vue3](https://v3.cn.vuejs.org/guide/introduction.html)
 [Vite](https://cn.vitejs.dev/)
 
+***
+
 ## 使用Vite构建项目
 npm:
 ```
@@ -23,7 +25,17 @@ $ yarn
 $ yarn dev
 ```
 
-# tips
+***
+
+## VUE3
+### 组合式 API 基础
+#### setup组件选项
+> 新的 <kbd>setup</kbd> 选项在组件被创建之前执行，一旦 props 被解析完成，它就将被作为组合式 API 的入口。
+> **注意：** stup中不能使用this获取vue实例。因为setup 的调用发生在 data property、computed property 或 methods 被解析之前，所以它们无法在 setup 中被获取。
+
+***
+
+## tips
 
 ### computed 和 methods 的区别
 - computed 和 methods 的却别在于，computed会基于它的响应依赖关系进行缓存，只有当它依赖的值发生改变的时候重新计算，这也就意味着，只要它所以来的值没有发生变化，再次请求时，都会返回之前的值，而不必再次执行函数，而methods，每次触发重新渲染时，都会执行函数
