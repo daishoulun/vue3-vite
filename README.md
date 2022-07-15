@@ -32,6 +32,7 @@ $ yarn dev
 #### setup组件选项
 > 新的 <kbd>setup</kbd> 选项在组件被创建之前执行，一旦 props 被解析完成，它就将被作为组合式 API 的入口。  
 > <kbd>setup</kbd> 中返回的数据可以在模板中任意访问
+> 因为 <kbd>setup</kbd> 是围绕 <kbd>beforeCreate</kbd> 和 <kbd>created</kbd> 生命周期钩子运行的，所以不需要显式地定义它们。换句话说，在这些钩子中编写的任何代码都应该直接在 setup 函数中编写（setup可以取代这两个钩子）。
 > **注意：** setup中不能使用this获取vue实例。因为setup 的调用发生在 data property、computed property 或 methods 被解析之前，所以它们无法在 setup 中被获取。
 
 ***
