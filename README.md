@@ -31,6 +31,7 @@ $ yarn dev
 ### 组合式 API 基础
 #### setup组件选项
 > 新的 <kbd>setup</kbd> 选项在组件被创建之前执行，一旦 props 被解析完成，它就将被作为组合式 API 的入口。  
+> <kbd>setup</kbd> 中返回的数据可以在模板中任意访问
 > **注意：** setup中不能使用this获取vue实例。因为setup 的调用发生在 data property、computed property 或 methods 被解析之前，所以它们无法在 setup 中被获取。
 
 ***
